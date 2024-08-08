@@ -1,0 +1,38 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "lib/*": ["lib/*"],
+      "@shared/*": ["../shared/*"]
+    }
+  },
+  "include": [
+    "src",
+    "components",
+    "pages",
+    ".next/types/**/*.ts",
+    "../shared",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../static/client/**/*.ts",
+    "static/sign-up/SignUpInputs.ts"
+  ]
+}
